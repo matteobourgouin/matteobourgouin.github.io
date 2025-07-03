@@ -1,0 +1,97 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.page {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    margin: auto auto;
+}
+
+
+video {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 1040px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    video, .page {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.logo {
+    height: 25px;
+}
+
+.bg-logo {
+    display: flex;
+
+    padding: 9px;
+    
+    border-radius: 25px;
+
+    background-color: #dddddd;
+    border-style: none;
+
+    transition: 0.5s;
+}
+
+.bg-logo:hover {
+    background-color: #d1d1d1;
+}
+
+.logo-row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+}
+
+.name {
+    font-size: 60px;
+    margin-bottom: -5px;
+    color: #022A55;
+
+    font-weight: 700;
+    text-align: center;
+}
+
+.description {
+    color: #546E87;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.travail-boutton {
+    border-style: none;
+    background-color: #022A55;
+    padding: 10px 35px 10px 35px;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: freight-neo-pro, Roboto;
+    margin-top: 40px;
+    margin-bottom: 55px;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.travail-boutton:hover {
+    background-color: #2765a7;
+}

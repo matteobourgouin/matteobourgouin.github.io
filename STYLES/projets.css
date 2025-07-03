@@ -1,0 +1,106 @@
+.body-projets {
+  margin-top: 100px;
+}
+
+.project-section {
+  text-align: center;
+  margin: 0px auto;
+
+  
+}
+
+.projet-title {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.project-description {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #999;
+    font-size: 20px;
+    
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 45px;
+  column-gap: 25px;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 1060px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.video-description {
+  height: 10px;
+}
+
+.CN-title {
+  height: 125px;
+  margin-bottom: 75px;
+}
+
+.CN-description {
+  width: 425px;
+  margin: auto auto;
+  font-size: 20px;
+  text-align: justify;
+  font-weight: 500;
+}
+
+.CN-container {
+  margin-top: 175px;
+}
+
+
+.end-section {
+  margin-bottom: 100px;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 60px;
+
+  background-color: white;
+  justify-content: space-between;
+
+  align-items: center;
+  
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  
+}
+
+.accueil-bouton {
+  margin-left: 30px;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.matteo-bouton {
+  
+  margin-left: 85px;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.logo-row-header {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    margin-right: 30px;
+}
