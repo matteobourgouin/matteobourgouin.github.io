@@ -1,97 +1,357 @@
-.main-container {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 100vh;
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(*) {
+  animation-duration: .33s;
+}
+
+::view-transition-old(root) {
+  animation: .33s ease-in both leave;
+}
+
+::view-transition-new(root) {
+  animation: .33s ease-in both enter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*) {
+    animation-duration: 0s;
+  }
+}
+
+@font-face {
+    font-family: Sunflower;
+    src: url(/FONT/MADE\ Sunflower\ PERSONAL\ USE.otf);
+}
+
+@font-face {
+    font-family: Coolvetica;
+    src: url(/FONT/Coolvetica\ Rg.otf);
+}
+
+@font-face {
+    font-family: Averta;
+    src: url(/FONT/Averta-Bold.ttf);
 }
 
 
-.page {
+::selection {
+    background-color: #fd8b7a;
+    color: #fff;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: #fd8b7a;
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff4de;
+    font-family: Coolvetica;
+    font-size: 20px;
+    color: black;
+    height: 100%;
+    
+    
+}
+
+
+
+
+
+.header {
+
+    position:relative;
+    z-index:2;
+
     display: flex;
-    width: 50%;
+    flex-direction: row;
+    
+    
+    
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 60px;
+    background-color: fff4de;
+    box-shadow: 0px 0px 15px 15px rgba(43, 42, 42, 0.164);
+    
+    justify-content:space-between;
+    align-items: center;
+    
+    /*position: fixed;*/
+
+    
+}
+
+
+
+
+.video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter:opacity(100%);
+
+    
+    
+    
+}
+
+
+
+.nom-accueil {
+    text-decoration: none;
+    color: black;
+    font-size: 23px;
+    margin-left: 50px;
+    font-family: Averta;
+    font-weight: 900;
+    letter-spacing: -1px;
+    transition: 250ms;
+
+    
+}
+
+.text-button {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.text-button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #000000;
+    bottom: -5px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+    
+
+    
+}
+
+
+.button-underline {
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
+    color: black;
+    position: relative;
+    text-underline-offset: 6px;
+}
+
+
+
+.text-button:hover::before {
+ 
+    transform-origin: left;
+    transform: scaleX(1);
+    
+}
+
+.boutons-end-row {
+    
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    column-gap: 35px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+
+
+
+
+.about {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    
     justify-content: center;
     align-items: center;
-    justify-items: center;
-    flex-direction: column;
-    margin: auto auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+    
 }
 
-
-video {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-@media (max-width: 1040px) {
-    .main-container {
+@media screen and (max-width: 725px)  {
+    .about {
         flex-direction: column;
     }
+}
 
-    video, .page {
-        width: 100%;
-        height: auto;
+h3 {
+    font-family: Averta;
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: -5px;
+
+}
+
+p {
+    /*margin-top: 75px;*/
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    /*margin-left: 250px;*/
+    /*margin-right: 250px;*/
+
+}
+
+.photo-pres {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+    
+
+}
+
+.text-about {
+    margin-left: 60px;
+    width: 650px;
+    height: 450px;
+}
+
+@media screen and (max-width: 725px)  {
+    .text-about {
+        width: auto;
+        margin-left: 0;
     }
 }
 
-.logo {
-    height: 25px;
-}
 
-.bg-logo {
-    display: flex;
 
-    padding: 9px;
+.logo-button {
     
-    border-radius: 25px;
-
-    background-color: #dddddd;
-    border-style: none;
-
-    transition: 0.5s;
-}
-
-.bg-logo:hover {
-    background-color: #d1d1d1;
-}
-
-.logo-row {
     display: flex;
     flex-direction: row;
-    column-gap: 8px;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 15px;
+    margin-right: 50px;
+
+    
+
+
 }
 
-.name {
-    font-size: 60px;
-    margin-bottom: -5px;
-    color: #022A55;
 
-    font-weight: 700;
-    text-align: center;
+.logo {
+    transition: 250ms;
 }
 
-.description {
-    color: #546E87;
-    font-weight: 400;
-    font-size: 20px;
+.logo:hover {
+    filter:invert(50%);
 }
 
-.travail-boutton {
-    border-style: none;
-    background-color: #022A55;
-    padding: 10px 35px 10px 35px;
-    border-radius: 50px;
+.nom-accueil:hover {
+    filter:invert(50%);
+}
+
+
+
+
+a {
+    color: #ff8c5a;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .boutons-end-row {
+        position: relative;
+        left: 0;
+        transform: translateX(0);
+    } 
+}
+
+@media screen and (max-width: 1025px) {
+    .header {
+        height: 200px;
+        width: 100%;
+        flex-direction: column;
+        justify-self: center;
+        align-self: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    } 
+
+    .boutons-end-row {
+        margin-top: 10px;
+        flex-direction: column;
+        font-size: 22px;
+        position: relative;
+        left: 0;
+        transform: translateX(0);
+        
+    }
+
+    .nom-accueil {
+       margin-left: 0;
+    }
+
+    .logo-button {
+        margin: 0;
+        padding: 0;
+    }
+} 
+
+
+footer {
+    display: flex;
+    background-color: #3a2c13;
+    color: #fff;
+    height: 125px;
+    margin-top: 250px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8%;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+    flex-grow: 0;
+    flex-shrink: 0;
+    
+    
+}
+
+footer a {
     color: white;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: freight-neo-pro, Roboto;
-    margin-top: 40px;
-    margin-bottom: 55px;
     text-decoration: none;
-    transition: 1s;
 }
 
-.travail-boutton:hover {
-    background-color: #2765a7;
+@media screen and (max-width: 1025px) {
+  footer {
+    flex-direction: column;
+    height: 250px;
+    
+
+    
+  }
+
+  footer .logo-button {
+    margin-top: 25px;
+    
+  }
 }

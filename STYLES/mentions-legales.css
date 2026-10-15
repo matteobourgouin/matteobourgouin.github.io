@@ -1,0 +1,10 @@
+.mentions-legales {
+    margin: 0 100px;
+    width: 960px;
+}
+
+@media screen and (max-width: 1060px) {
+    .mentions-legales {
+        width: auto;
+    }
+}
