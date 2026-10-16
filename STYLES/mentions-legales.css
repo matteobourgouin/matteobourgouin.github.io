@@ -1,10 +1,12 @@
 .mentions-legales {
     margin: 0 100px;
     width: 960px;
+    text-align: justify;
 }
 
 @media screen and (max-width: 1060px) {
     .mentions-legales {
         width: auto;
+        font-size: 4vw;
     }
 }

@@ -225,8 +225,12 @@ p {
     object-fit: cover;
     
     
-
+    
+    
 }
+
+
+
 
 .text-about {
     margin-left: 60px;
@@ -238,6 +242,10 @@ p {
     .text-about {
         width: auto;
         margin-left: 0;
+    }
+
+    .photo-pres {
+        scale: 75%;
     }
 }
 
@@ -294,7 +302,7 @@ a {
         justify-self: center;
         align-self: center;
         padding-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     } 
 
     .boutons-end-row {
@@ -314,6 +322,13 @@ a {
     .logo-button {
         margin: 0;
         padding: 0;
+    }
+
+    .video {
+        object-position: 0 0;
+        object-fit: scale-down;
+        width: 100%;
+
     }
 } 
 
