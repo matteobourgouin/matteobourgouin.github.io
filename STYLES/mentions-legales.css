@@ -6,7 +6,8 @@
 
 @media screen and (max-width: 1060px) {
     .mentions-legales {
-        width: auto;
+        width: 80%;
         font-size: 4vw;
+        margin: auto;
     }
 }
