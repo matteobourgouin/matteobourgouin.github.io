@@ -29,7 +29,7 @@
 
 
 .projets-title {
-    margin: auto;
+    margin: 0 25px;
     font-size: 50px;
     display: flex;
     flex-direction: column;
@@ -115,6 +115,11 @@ body::before {
     column-gap: 0px;
   }
 } 
+
+
+.projet-description {
+  margin: 0 25px;
+}
 
 
 #smash2025:checked ~ .plus-smash2025 {

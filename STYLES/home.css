@@ -202,10 +202,16 @@ body {
 
 h3 {
     font-family: Averta;
-    font-size: 70px;
+    font-size: 3.5em;
     font-weight: 900;
     letter-spacing: -5px;
 
+}
+
+@media screen and (max-width: 370px)  {
+    h3 {
+        font-size: 3em;
+    }
 }
 
 p {
@@ -302,7 +308,8 @@ a {
         justify-self: center;
         align-self: center;
         padding-top: 10px;
-        padding-bottom: 20px;
+        padding-bottom: 35px;
+        
     } 
 
     .boutons-end-row {
@@ -312,7 +319,8 @@ a {
         position: relative;
         left: 0;
         transform: translateX(0);
-        
+        row-gap: 10px;
+        margin-bottom: 15px;
     }
 
     .nom-accueil {
